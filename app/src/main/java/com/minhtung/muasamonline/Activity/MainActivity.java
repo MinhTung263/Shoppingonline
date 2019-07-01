@@ -187,13 +187,8 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (taiKhoanArrayList.size()>0){
-                    Intent intent=new Intent(getApplicationContext(),KhachHangActivity.class);
-                    startActivity(intent);
-                }else{
-                    Intent intent=new Intent(getApplicationContext(),DangNhapActivity.class);
-                    startActivity(intent);
-                }
+        Intent intent=new Intent(getApplicationContext(),KhachHangActivity.class);
+        startActivity(intent);
 
             }
         });
@@ -353,13 +348,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.menugiohang:
-                if (taiKhoanArrayList.size()>0){
-                    Intent intent=new Intent(getApplicationContext(),GioHangActivity.class);
-                    startActivity(intent);
-                }else{
-                    Intent intent=new Intent(getApplicationContext(),DangNhapActivity.class);
-                    startActivity(intent);
-                }
+                Intent intent=new Intent(getApplicationContext(),GioHangActivity.class);
+                startActivity(intent);
                 return  false;
         }
         return true;

@@ -29,7 +29,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class KhachHangActivity extends AppCompatActivity {
-    private static final String SHARED_PREF_NAME = "volleyregisterlogin";
     TextView tvTenKhach;
     TextView tvEmail;
     Toolbar toolbar;

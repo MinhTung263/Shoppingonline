@@ -77,7 +77,6 @@ private ProgressDialog pDialog;
                                         Log.d(TAG, response);
                                             if (response.equals("1")) {
                                                 MainActivity.manggiohang.clear();
-                                                Toast.makeText(getApplicationContext(), "Bạn đã mua hàng thành công!", Toast.LENGTH_SHORT).show();
                                                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                                 startActivity(intent);
                                                 Toast.makeText(getApplicationContext(), "Mời bạn tiếp tục mua hàng!", Toast.LENGTH_SHORT).show();

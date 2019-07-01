@@ -80,14 +80,8 @@ LinearLayout linearlayoutKhongCoSanPham,linearlayoutCoSanPham;
         btnMuaNgay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (MainActivity.taiKhoanArrayList.size()>0){
-                    Intent intent=new Intent(getApplicationContext(),ThongTinKhachHangActivity.class);
-                    startActivity(intent);
-                }else{
-                    Intent intent=new Intent(getApplicationContext(),DangNhapActivity.class);
-                    startActivity(intent);
-                }
-
+                Intent intent=new Intent(getApplicationContext(),ThongTinKhachHangActivity.class);
+                startActivity(intent);
             }
         });
         btnTiepTucMua.setOnClickListener(new View.OnClickListener() {
