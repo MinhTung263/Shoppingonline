@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33304FFE"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp" >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:textSize="18sp"
+                android:id="@+id/editUsername"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Tài khoản"
+                android:padding="15dp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/input_login"
+                android:textColorHint="@color/input_login_hint"
+                android:inputType="textCapWords" />
+        </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <EditText
+              android:textSize="18sp"
+              android:id="@+id/editPassword"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="10dp"
+              android:hint="Mật khẩu"
+              android:inputType="textPassword"
+              android:padding="15dp"
+              android:background="@color/colorWhite"
+              android:textColor="@color/input_login"
+              android:textColorHint="@color/input_login_hint"/>
+      </android.support.design.widget.TextInputLayout>
+
+       <android.support.design.widget.TextInputLayout
+           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <EditText
+               android:textSize="18sp"
+               android:id="@+id/editEmail"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="10dp"
+               android:hint="Email"
+               android:inputType="textEmailAddress"
+               android:padding="15dp"
+               android:background="@color/colorWhite"
+               android:textColor="@color/input_login"
+               android:textColorHint="@color/input_login_hint" />
+       </android.support.design.widget.TextInputLayout>
+
+        <!-- Login Button -->
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#ea4c88"
+            android:text="Đăng ký"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@color/colorApp"
+            android:text="Đăng nhập"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+</LinearLayout>

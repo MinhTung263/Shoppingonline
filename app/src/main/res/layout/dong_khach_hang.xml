@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <ImageView
+           android:layout_centerVertical="true"
+           android:id="@+id/HinhSP"
+           android:scaleType="fitXY"
+           android:padding="10dp"
+           android:src="@mipmap/ic_launcher"
+           android:layout_width="100dp"
+           android:layout_height="100dp" />
+       <TextView
+           android:maxWidth="190dp"
+           android:maxLines="3"
+           android:id="@+id/TenSP"
+           android:textColor="@color/colorBlack"
+           android:layout_toRightOf="@+id/HinhSP"
+           android:padding="15dp"
+           android:text="Tên sản phẩm"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <TextView
+           android:gravity="end"
+           android:layout_alignParentEnd="true"
+           android:textColor="@color/colorRed"
+           android:layout_toRightOf="@+id/TenSP"
+           android:padding="15dp"
+           android:text="Chờ xác nhận"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <TextView
+           android:layout_below="@+id/TenSP"
+           android:id="@+id/SoLuong"
+           android:textColor="@color/colorBlack"
+           android:layout_toRightOf="@+id/HinhSP"
+           android:padding="15dp"
+           android:text="20"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <TextView
+           android:gravity="end"
+           android:layout_alignParentEnd="true"
+           android:layout_below="@+id/TenSP"
+           android:id="@+id/GiaSP"
+           android:textColor="@color/colorRed"
+           android:layout_toRightOf="@+id/HinhSP"
+           android:padding="15dp"
+           android:text="28.000"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+   </RelativeLayout>
+</RelativeLayout>

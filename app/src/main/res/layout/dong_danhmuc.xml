@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="5dp"
+    android:layout_width="120dp"
+    android:layout_height="120dp">
+    <ImageView
+        android:layout_centerInParent="true"
+        android:id="@+id/imgDanhMuc"
+        android:scaleType="fitXY"
+        android:src="@mipmap/noimage"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+    <TextView
+        android:layout_centerInParent="true"
+        android:textColor="@color/colorBlack"
+        android:textAlignment="center"
+        android:id="@+id/tvTenDM"
+        android:layout_below="@id/imgDanhMuc"
+        android:text="Điện thoại"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

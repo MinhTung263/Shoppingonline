@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="50dp"
+    android:padding="5dp"
+    android:background="@null"
+    android:layout_height="50dp"
+    android:layout_marginRight="20dp"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:background="@drawable/icon_giohang"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center" />
+
+    <FrameLayout
+        android:id="@+id/view_alert_red_circle"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="top|end"
+        android:background="@drawable/tron"
+        tools:visibility="visible">
+        <TextView
+            android:gravity="center"
+            android:textAlignment="center"
+            android:id="@+id/view_alert_count_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            tools:text="3"/>
+
+    </FrameLayout>
+
+</FrameLayout>

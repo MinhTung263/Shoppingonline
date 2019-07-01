@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#4000BFA5"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ThongTinKhachHangActivity">
+    <LinearLayout
+        android:weightSum="10"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_weight="7"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:textSize="25sp"
+                android:padding="30dp"
+                android:textAlignment="center"
+                android:text="Thông tin khách hàng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_margin="15dp"
+                    android:background="@color/colorWhite"
+                    android:inputType="textCapWords"
+                    android:id="@+id/txtTenKhachHang"
+                    android:padding="5dp"
+                    android:textStyle="italic"
+                    android:textSize="18sp"
+                    android:hint="Tên khách hàng "
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+                <TextView
+                    android:padding="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_margin="15dp"
+                    android:background="@color/colorWhite"
+                    android:id="@+id/txtEmail"
+                    android:inputType="textEmailAddress"
+                    android:textStyle="italic"
+                    android:textSize="18sp"
+                    android:hint="Email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp" />
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_margin="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:textStyle="italic"
+                    android:textSize="18sp"
+                    android:id="@+id/edtSDT"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:hint="Số diện thoại"
+                    android:inputType="phone"
+                    android:padding="10dp"
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_margin="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:textStyle="italic"
+                    android:textSize="18sp"
+                    android:id="@+id/edtDiaChi"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:hint="Địa chỉ"
+                    android:inputType="textCapWords"
+                    android:padding="10dp"
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+       <LinearLayout
+           android:layout_marginTop="-15dp"
+           android:layout_weight="3"
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="0dp">
+          <RelativeLayout
+              android:layout_marginTop="50dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <Button
+                  android:id="@+id/btnXacNhan"
+                  android:padding="5dp"
+                  android:layout_margin="15dp"
+                  android:textSize="18sp"
+                  android:textColor="@color/colorWhite"
+                  android:background="@color/colorRed"
+                  android:text="Xác nhận"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" />
+              <Button
+                  android:layout_below="@+id/btnXacNhan"
+                  android:id="@+id/btnHuy"
+                  android:padding="5dp"
+                  android:layout_margin="15dp"
+                  android:textSize="18sp"
+                  android:textColor="@color/colorBlack"
+                  android:background="@drawable/huybackground"
+                  android:text="Hủy"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" />
+          </RelativeLayout>
+       </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
