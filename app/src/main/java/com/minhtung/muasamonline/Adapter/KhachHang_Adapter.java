@@ -50,15 +50,15 @@ public class KhachHang_Adapter extends BaseAdapter {
         view=inflater.inflate(R.layout.dong_khach_hang,null);
         HinhSP=view.findViewById(R.id.HinhSP);
         TenSP=view.findViewById(R.id.TenSP);
-        GiaSP=view.findViewById(R.id.SoLuong);
-        SoLuong=view.findViewById(R.id.GiaSP);
+        GiaSP=view.findViewById(R.id.GiaSP);
+        SoLuong=view.findViewById(R.id.SoLuong);
         KhachHang khachHang= (KhachHang) getItem(position);
 
         Picasso.with(context).load(khachHang.getHinhSP()).placeholder(R.mipmap.noimage).error(R.mipmap.error).into(HinhSP);
         TenSP.setText(khachHang.getTenSP());
         DecimalFormat decimalFormat=new DecimalFormat("###,###,###");
-        GiaSP.setText(decimalFormat.format(khachHang.getGiaSP()));
-        SoLuong.setText(khachHang.getSoLuong()+"");
+        GiaSP.setText("Tổng thanh toán: "+decimalFormat.format(khachHang.getGiaSP())+"đ");
+        SoLuong.setText("Số lượng: "+khachHang.getSoLuong()+"");
 
         return view;
     }

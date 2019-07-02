@@ -15,7 +15,7 @@
            android:layout_width="100dp"
            android:layout_height="100dp" />
        <TextView
-           android:maxWidth="190dp"
+           android:maxWidth="170dp"
            android:maxLines="3"
            android:id="@+id/TenSP"
            android:textColor="@color/colorBlack"
@@ -25,12 +25,10 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content" />
        <TextView
-           android:gravity="end"
            android:layout_alignParentEnd="true"
            android:textColor="@color/colorRed"
-           android:layout_toRightOf="@+id/TenSP"
            android:padding="15dp"
-           android:text="Chờ xác nhận"
+           android:text="Chờ lấy hàng"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content" />
        <TextView
@@ -43,12 +41,10 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content" />
        <TextView
-           android:gravity="end"
            android:layout_alignParentEnd="true"
            android:layout_below="@+id/TenSP"
            android:id="@+id/GiaSP"
            android:textColor="@color/colorRed"
-           android:layout_toRightOf="@+id/HinhSP"
            android:padding="15dp"
            android:text="28.000"
            android:layout_width="wrap_content"

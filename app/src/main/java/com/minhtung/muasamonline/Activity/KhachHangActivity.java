@@ -1,5 +1,6 @@
 package com.minhtung.muasamonline.Activity;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -32,6 +33,7 @@ public class KhachHangActivity extends AppCompatActivity {
     TextView tvTenKhach;
     TextView tvEmail;
     Toolbar toolbar;
+    ProgressDialog progressDialog;
     ListView lvKhachHang;
     KhachHang_Adapter khachHang_adapter;
     ArrayList<KhachHang> khachHangArrayList=new ArrayList<>();
@@ -45,6 +47,10 @@ public class KhachHangActivity extends AppCompatActivity {
         toolbar=findViewById(R.id.toolbarKhachHang);
         ActionToolbar();
         addControl();
+        progressDialog=new ProgressDialog(this,R.style.StyledDialog);
+        progressDialog.setIndeterminate(false);
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Đang tải dữ liệu...");
         getDaTaKH(MainActivity.taiKhoanArrayList.get(0).getUser_id());
     }
 
@@ -60,6 +66,7 @@ public class KhachHangActivity extends AppCompatActivity {
     }
 
     private void getDaTaKH(String user_id) {
+        progressDialog.show();
         API.initRetrofit().create(API.ApiInterface.class).getIdDonHang(user_id).enqueue(new Callback<List<KhachHang>>() {
             @Override
             public void onResponse(Call<List<KhachHang>> call, Response<List<KhachHang>> response) {
@@ -67,6 +74,7 @@ public class KhachHangActivity extends AppCompatActivity {
                khachHang_adapter=new KhachHang_Adapter(getApplicationContext(),khachHangArrayList);
                lvKhachHang.setAdapter(khachHang_adapter);
                khachHang_adapter.notifyDataSetChanged();
+                progressDialog.dismiss();
             }
             @Override
             public void onFailure(Call<List<KhachHang>> call, Throwable t) {
