@@ -18,7 +18,7 @@ import retrofit2.http.POST;
 public class API {
     public static Retrofit initRetrofit() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://luongtung263.000webhostapp.com/Muasamonline/FilePHP/")
+                .baseUrl("https://minhtung97.000webhostapp.com/Muasamonline/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         return retrofit;
@@ -61,4 +61,5 @@ public class API {
     public static String Dangnhap=initRetrofit().baseUrl()+"dangnhap.php";
     public static String Dangky=initRetrofit().baseUrl()+"dangky.php";
     public static String Chitietdonhang=initRetrofit().baseUrl()+"chitietdonhang.php";
+    public static String Huydonhang=initRetrofit().baseUrl()+"xoa.php";
 }

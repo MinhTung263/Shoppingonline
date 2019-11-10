@@ -1,10 +1,7 @@
 package com.minhtung.muasamonline.Activity;
 
-import android.accounts.Account;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,7 +24,6 @@ import com.minhtung.muasamonline.Server.API;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -51,7 +47,9 @@ public class DangNhapActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = edtUserName.getText().toString().trim();
                 String password = edtPassWord.getText().toString().trim();
+
                 loginAccount(username, password);
+
             }
         });
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -126,6 +124,7 @@ public class DangNhapActivity extends AppCompatActivity {
             RequestQueue queue = Volley.newRequestQueue(this);
             queue.add(requestLogin);
         }
+
     }
 
     /**
